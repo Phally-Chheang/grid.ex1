@@ -1,0 +1,59 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+}
+.container{
+    background-color: white;
+    display: grid;
+    gap:10px 0;
+    grid-template-columns:repeat(3,1fr);
+    /* grid-template-rows: 50px 100px 50px 100px 50px; */
+    grid-template-areas:
+    'header header header '
+    'life Article1 right'
+    'life Article2 right'
+    'life Article3 right'
+    'footer footer footer';
+}
+.container > div {
+    padding: 40px 0;
+}
+
+.header{
+    grid-area:header ;
+    background-color: black;
+    color: white;
+}
+.life{
+    grid-area: life;
+    background-color: rgb(231, 231, 231);
+    margin-top: -10px;
+}
+.Article1{
+    grid-area: Article1;
+    background-color: white;
+    margin-top: -10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.Article2{
+    grid-area: Article2;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.Article3{
+    grid-area: Article3;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.right{
+    grid-area:right ;
+    margin-top: -10px;
+    background-color: rgb(231, 231, 231);
+}
+.footer{
+    grid-area:footer ;
+    margin-top: -10px;
+    background-color: black;
+    color: white;
+}
